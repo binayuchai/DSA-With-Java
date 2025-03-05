@@ -10,6 +10,13 @@ public class reverse1 {
         }
         System.out.println();
     }
+    public static void resultCollectionArray(Integer[] arr){
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
+    }
+
 
     
     public static void reverseNumber(int[] arr,int high,int low){
@@ -32,15 +39,19 @@ public class reverse1 {
     }
     public static void main(String[] args) {
         int[] a = {1,2,3};
+        Integer[] b = {3,4,5};
+
         System.out.println("Initial Order is: ");
         resultArray(a);
+        resultCollectionArray(b);
 
         System.out.println("Reverse order is : ");
-//        reverseNumber(a,(a.length-1),0);
 
-        Integer[] b = {1,2,3};
-        reverseArray(b);
         reverseNumber(a,(a.length-1),0);
+        // Using Collection Framework
+        reverseArray(b);
+        resultCollectionArray(b);
+
 
 
     }
